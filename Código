@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+int main()
+{
+// Declaracion de las variables //
+        int n1,b1,b2,i;
+// Declaracion del vector //
+        int contenedor[15];
+// Boleanos para comprobar si los numeros estaban dentro//        
+        bool a = false;
+        bool b = false;
+        for(i=0;i<15;++i){
+            printf("Introduce un numero--> \n");
+                scanf("%i", &(contenedor[i]));
+        }
+    printf("Introduce el primer número que deseas buscar:");
+        scanf("%i",&b1);
+    printf("Introduce el segundo número que deseas buscar:");
+        scanf("%i",&b2);
+    // bucle para ver si el numero esta dentro del array//
+        for(i=0;i<15;++i){
+            //Lee todas las posiciones y  comprueba cada posición buscando el valor b1 //
+        if (b1 == contenedor[i]) {
+            printf("El numero %d está dentro del array.\n", contenedor[i]);
+            a=true;
+        }
+            //Lee todas las posiciones y  comprueba cada posición buscando el valor b1 //
+        if (b2 == contenedor[i]) {
+            printf("El numero %d está dentro del array.\n", contenedor[i]);
+            b=true;
+            }
+         
+    }
+    // Condiciones si el numero esta fuera del vector//
+        if (a == false) {
+            printf("El numero %d no esta en el array\n", b1);
+        }
+        if (b == false) {
+            printf("El numero %d no esta en el array\n", b2);
+        }
+}
